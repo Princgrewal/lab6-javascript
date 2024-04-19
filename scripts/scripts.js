@@ -92,7 +92,7 @@ let durationButton = document.getElementById("duration-button");
 function changeDuration() {
     let duration_text = document.getElementById("duration-text");
     let new_duration = prompt("Enter new duration:");
-    if (!isNaN(new_duration) & new_duration > 0) {
+    if (!isNaN(new_duration) , new_duration > 0) {
         duration = parseInt(new_duration);
         duration_text.innerHTML = duration;
     } else {
