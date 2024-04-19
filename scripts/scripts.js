@@ -10,7 +10,7 @@ You are encouraged to use the provided naming convention for ease of review.
 /* create variables to hold the values for modelName and duration */
 
 // INSERT YOUR CODE HERE
-let model_Name = "XYZ";
+let model_name = "XYZ";
 let duration = 0; 
 
 
@@ -30,15 +30,15 @@ let duration = 0;
 function recalculate() {
 
     let costLabel = document.getElementById("calculated-cost");
-    let new_total_Cost;
-    if (model_Name === "XYZ") {
-        new_total_Cost = duration * 100;
-    } else if (model_Name === "CPRG") {
-        new_total_Cost = duration * 213;
+    let new_total_cost;
+    if (model_name === "XYZ") {
+        new_total_cost = duration * 100;
+    } else if (model_name === "CPRG") {
+        new_total_cost = duration * 213;
     } else {
-        console.error("Unexpected model name:", model_Name);
+        console.error("Unexpected model name:", model_name);
     }
-    costLabel.innerHTML = new_total_Cost;
+    costLabel.innerHTML = new_total_cost;
 }
 
 
@@ -60,13 +60,13 @@ function recalculate() {
 // INSERT YOUR CODE HERE
 let modelButton = document.getElementById("model-button");
 function changeModel() {
-    let model_Text = document.getElementById("model-text");
-    if (model_Name === "XYZ") {
-        model_Name = "CPRG";
-        model_Text.innerHTML = "Model CPRG";
-    } else if (model_Name === "CPRG") {
-        model_Name = "XYZ";
-        model_Text.innerHTML = "Model XYZ";
+    let model_text = document.getElementById("model-text");
+    if (model_name === "XYZ") {
+        model_name = "CPRG";
+        model_text.innerHTML = "Model CPRG";
+    } else if (model_name === "CPRG") {
+        model_name = "XYZ";
+        model_text.innerHTML = "Model XYZ";
     }
     recalculate();
 }
@@ -90,11 +90,11 @@ modelButton.addEventListener("click", changeModel);
 
 let durationButton = document.getElementById("duration-button");
 function changeDuration() {
-    let duration_Text = document.getElementById("duration-text");
-    let new_Duration = prompt("Enter new duration:");
-    if (!isNaN(new_Duration) & new_Duration > 0) {
-        duration = parseInt(new_Duration);
-        duration_Text.innerHTML = duration;
+    let duration_text = document.getElementById("duration-text");
+    let new_duration = prompt("Enter new duration:");
+    if (!isNaN(new_duration) & new_duration > 0) {
+        duration = parseInt(new_duration);
+        duration_text.innerHTML = duration;
     } else {
         alert("Invalid duration. Please enter a positive number.");
     }
