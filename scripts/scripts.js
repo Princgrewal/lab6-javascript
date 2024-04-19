@@ -1,4 +1,4 @@
-/****************** YOUR NAME: 
+/****************** YOUR NAME: Princedeep Singh
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
 
@@ -10,8 +10,8 @@ You are encouraged to use the provided naming convention for ease of review.
 /* create variables to hold the values for modelName and duration */
 
 // INSERT YOUR CODE HERE
-let modelName = "XYZ";
-let duration = 1; 
+let model_Name = "XYZ";
+let duration = 0; 
 
 
 
@@ -31,12 +31,12 @@ function recalculate() {
 
     let costLabel = document.getElementById("calculated-cost");
     let new_total_Cost;
-    if (modelName === "XYZ") {
+    if (model_Name === "XYZ") {
         new_total_Cost = duration * 100;
-    } else if (modelName === "CPRG") {
+    } else if (model_Name === "CPRG") {
         new_total_Cost = duration * 213;
     } else {
-        console.error("Unexpected model name:", modelName);
+        console.error("Unexpected model name:", model_Name);
     }
     costLabel.innerHTML = new_total_Cost;
 }
@@ -56,18 +56,17 @@ function recalculate() {
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-// modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
 let modelButton = document.getElementById("model-button");
 function changeModel() {
-    let modelText = document.getElementById("model-text");
-    if (modelName === "XYZ") {
-        modelName = "CPRG";
-        modelText.innerHTML = "Model CPRG";
-    } else if (modelName === "CPRG") {
-        modelName = "XYZ";
-        modelText.innerHTML = "Model XYZ";
+    let model_Text = document.getElementById("model-text");
+    if (model_Name === "XYZ") {
+        model_Name = "CPRG";
+        model_Text.innerHTML = "Model CPRG";
+    } else if (model_Name === "CPRG") {
+        model_Name = "XYZ";
+        model_Text.innerHTML = "Model XYZ";
     }
     recalculate();
 }
@@ -91,11 +90,11 @@ modelButton.addEventListener("click", changeModel);
 
 let durationButton = document.getElementById("duration-button");
 function changeDuration() {
-    let durationText = document.getElementById("duration-text");
-    let newDuration = prompt("Enter new duration:");
-    if (!isNaN(newDuration) & newDuration > 0) {
-        duration = parseInt(newDuration);
-        durationText.innerHTML = duration;
+    let duration_Text = document.getElementById("duration-text");
+    let new_Duration = prompt("Enter new duration:");
+    if (!isNaN(new_Duration) & new_Duration > 0) {
+        duration = parseInt(new_Duration);
+        duration_Text.innerHTML = duration;
     } else {
         alert("Invalid duration. Please enter a positive number.");
     }
