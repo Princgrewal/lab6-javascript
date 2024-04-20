@@ -35,9 +35,7 @@ function recalculate() {
         new_total_cost = duration * 100;
     } else if (model_name === "CPRG") {
         new_total_cost = duration * 213;
-    } else {
-        console.error("Unexpected model name:", model_name);
-    }
+    } 
     costLabel.innerHTML = new_total_cost;
 }
 
@@ -96,7 +94,7 @@ function changeDuration() {
         duration = parseInt(new_duration);
         duration_text.innerHTML = duration;
     } else {
-        alert("Invalid duration. Please enter a positive number.");
+        alert("Invalid duration.");
     }
     recalculate();
 }
